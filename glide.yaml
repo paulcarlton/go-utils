@@ -1,0 +1,24 @@
+package: github.hpe.com/platform-core/utils
+import:
+- package: github.com/sirupsen/logrus
+- package: github.com/ugorji/go
+  subpackages:
+  - codec
+- package: github.hpe.com/kronos/kelog
+- package: k8s.io/api
+  subpackages:
+  - core/v1
+- package: k8s.io/apimachinery
+  subpackages:
+  - pkg/apis/meta/v1
+- package: k8s.io/client-go
+  subpackages:
+  - kubernetes
+# Pinned as otherwise elastic.v5 blows up on kelog
+- package: github.com/sohlich/elogrus
+  version: 2.1
+# Pinned to avoid issues caused by upstream changes
+- package: github.com/davecgh/go-spew
+  version: 1.1.1
+# Arbitrary Pin
+- package: github.hpe.com/ncs-security/sec-side-golib

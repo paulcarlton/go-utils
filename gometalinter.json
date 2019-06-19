@@ -1,0 +1,52 @@
+{
+  "Vendor": true,
+  "Test":  true,
+  "JSON": true,
+  "Deadline": "4m",
+  "Sort": ["linter", "severity", "path", "line"],
+  "EnableGC": true,
+  "WarnUnmatchedDirective": true,
+
+  "Exclude": [
+    "vendor",
+    "cache",
+    "build",
+    "bin"
+  ],
+
+  "Skip": [
+    "vendor",
+    "cache",
+    "build",
+    "bin"
+  ],
+
+  "DisableAll": true,
+  "Enable": [
+    "deadcode",
+    "errcheck",
+    "goconst",
+    "gocyclo",
+    "gofmt",
+    "goimports",
+    "golint",
+    "gosec",
+    "gotype",
+    "gotypex",
+    "ineffassign",
+    "interfacer",
+    "lll",
+    "maligned",
+    "misspell",
+    "nakedret",
+    "safesql",
+    "structcheck",
+    "unconvert",
+    "unparam",
+    "varcheck",
+    "vet"
+  ],
+
+  "Cyclo": 16,
+  "LineLength": 160
+}
