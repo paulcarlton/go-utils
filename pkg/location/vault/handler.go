@@ -17,8 +17,8 @@ import (
 	"strings"
 
 	sidelib "github.hpe.com/ncs-security/sec-side-golib"
-	"github.hpe.com/platform-core/utils/pkg/core"
-	"github.hpe.com/platform-core/utils/pkg/location"
+	"github.com/paulcarlton/go-utils/pkg/core"
+	"github.com/paulcarlton/go-utils/pkg/location"
 )
 
 const (

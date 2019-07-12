@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.hpe.com/platform-core/utils/pkg/testutils"
+	"github.com/paulcarlton/go-utils/pkg/testutils"
 )
 
 func TestCompareErrors(t *testing.T) {

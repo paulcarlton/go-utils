@@ -6,12 +6,44 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"net/http"
 	"path/filepath"
 	"runtime"
 	"sort"
 	"strings"
 	"time"
 )
+
+// JsonText generates a string containing a json representation of an interface
+func JsonText(i interface{}) string {
+	details := fmt.Sprintf("json for %+v...\n", i)
+	if jsonData, err := json.Marshal(i); err != nil {
+		details = details + fmt.Sprintf("json marshal error: %s\n", err)
+	} else {
+		if jsonText, err := PrettyJSON(string(jsonData)); err != nil {
+			details = details + fmt.Sprintf("json format error: %s\n", err)
+		} else {
+			details = details + fmt.Sprintf("%s\n", jsonText)
+		}
+	}
+	return details
+}
+// RequestDebug generates a string containing details of a request
+func RequestDebug(r *http.Request) string {
+	debugText := fmt.Sprintf("URL: %+v\n", r.URL)
+	buf, _ := ioutil.ReadAll(r.Body)
+	rdr1 := ioutil.NopCloser(bytes.NewBuffer(buf))
+	rdr2 := ioutil.NopCloser(bytes.NewBuffer(buf))
+	data, e := ioutil.ReadAll(rdr1)
+	if e != nil {
+		debugText = debugText + fmt.Sprintf("error reading body, %s", e)
+	} else {
+		debugText = debugText + fmt.Sprintf("Body..\n%s\n", string(data))
+	}
+	r.Body = rdr2 // OK since rdr2 implements the io.ReadCloser interface
+	return debugText
+}
 
 // Callers returns an array of strings containing the function name, source filename and line
 // number for the caller of this function and its caller moving up the stack for as many levels as

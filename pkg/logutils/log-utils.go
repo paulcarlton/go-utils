@@ -12,7 +12,7 @@ import (
 	"github.com/sirupsen/logrus"
 	log "github.hpe.com/kronos/kelog"
 
-	"github.hpe.com/platform-core/utils/pkg/testutils"
+	"github.com/paulcarlton/go-utils/pkg/testutils"
 )
 
 // Types

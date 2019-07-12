@@ -11,8 +11,8 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"github.hpe.com/platform-core/utils/pkg/core"
-	k8sutilsv1 "github.hpe.com/platform-core/utils/pkg/k8sutils/v1"
+	"github.com/paulcarlton/go-utils/pkg/core"
+	k8sutilsv1 "github.com/paulcarlton/go-utils/pkg/k8sutils/v1"
 )
 
 // K8s is a structure that hold a kubernetes client and implements the K8sUtils interface

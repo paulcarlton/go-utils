@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.hpe.com/platform-core/utils/pkg/core"
-	"github.hpe.com/platform-core/utils/pkg/location"
-	"github.hpe.com/platform-core/utils/pkg/location/memory"
-	"github.hpe.com/platform-core/utils/pkg/location/vault"
+	"github.com/paulcarlton/go-utils/pkg/core"
+	"github.com/paulcarlton/go-utils/pkg/location"
+	"github.com/paulcarlton/go-utils/pkg/location/memory"
+	"github.com/paulcarlton/go-utils/pkg/location/vault"
 )
 
 const (
