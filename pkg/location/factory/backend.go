@@ -9,7 +9,6 @@ import (
 	"github.com/paulcarlton/go-utils/pkg/core"
 	"github.com/paulcarlton/go-utils/pkg/location"
 	"github.com/paulcarlton/go-utils/pkg/location/memory"
-	"github.com/paulcarlton/go-utils/pkg/location/vault"
 )
 
 const (
@@ -27,8 +26,6 @@ func SelectHandler(uri string) (location.Handler, error) {
 	}
 
 	switch uriParts.Scheme {
-	case vault.HandlerScheme:
-		return vault.GetHandler()
 	case memory.HandlerScheme:
 		return memory.GetHandler()
 	default:
