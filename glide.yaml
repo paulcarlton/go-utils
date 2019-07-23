@@ -1,10 +1,11 @@
-package: github.hpe.com/platform-core/utils
+package: github.com/paulcarlton/go-utils
 import:
 - package: github.com/sirupsen/logrus
 - package: github.com/ugorji/go
   subpackages:
   - codec
-- package: github.hpe.com/kronos/kelog
+- package: k8s.io/klog
+  version: 0.2.0
 - package: k8s.io/api
   subpackages:
   - core/v1
@@ -20,5 +21,3 @@ import:
 # Pinned to avoid issues caused by upstream changes
 - package: github.com/davecgh/go-spew
   version: 1.1.1
-# Arbitrary Pin
-- package: github.hpe.com/ncs-security/sec-side-golib

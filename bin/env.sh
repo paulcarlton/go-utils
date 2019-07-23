@@ -13,6 +13,10 @@ PROJECT_NAME="${ORG}/${PROJECT}"
 
 PROJECT_BIN_ROOT="${GOPATH}/bin/${PROJECT_NAME}"
 
+if ! grep -q "${PROJECT_DIR}/bin" <<< "${PATH}"; then
+    export PATH=${PROJECT_DIR}/bin:${PATH}
+fi
+
 if ! grep -q "${PROJECT_BIN_ROOT}" <<< "${PATH}"; then
     export PATH=${PROJECT_BIN_ROOT}:${PATH}
     export GOBIN="${PROJECT_BIN_ROOT}"

@@ -3,7 +3,7 @@
 
 # Set versions of software required
 metalinter_version=2.0.12
-golang_version=1.11.3
+golang_version=1.12.7
 
 function usage()
 {
