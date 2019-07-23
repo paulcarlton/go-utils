@@ -1,8 +1,8 @@
 # (c) Copyright 2018-2019 Hewlett Packard Enterprise Development LP
-FROM staging-docker.artifactory.zing.hpelabs.net/panormos/go-build:0.0.13-g5e3627d50c34f1 as builder
+FROM pcarlton/go-builder:0.0.1 as builder
 
 ARG VERSION
-WORKDIR /go/src/github.hpe.com/platform-core/utils
+WORKDIR /go/src/github.com/paulcarlton/utils
 COPY . .
 RUN make build
 
