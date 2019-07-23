@@ -3,15 +3,17 @@
 package goutils
 
 import (
+	"net/http"
+
 	"github.com/paulcarlton/go-utils/pkg/core"
 	"github.com/paulcarlton/go-utils/pkg/internal/common"
-	"net/http"
 )
 
-// JsonText generates a string containing a json representation of an interface
-func JsonText(i interface{}) string {
-	return common.JsonText(i)
+// JSONtext generates a string containing a json representation of an interface
+func JSONtext(i interface{}) string {
+	return common.JSONtext(i)
 }
+
 // RequestDebug generates a string containing details of a request
 func RequestDebug(r *http.Request) string {
 	return common.RequestDebug(r)

@@ -15,8 +15,8 @@ import (
 	"time"
 )
 
-// JsonText generates a string containing a json representation of an interface
-func JsonText(i interface{}) string {
+// JSONtext generates a string containing a json representation of an interface
+func JSONtext(i interface{}) string {
 	details := fmt.Sprintf("json for %+v...\n", i)
 	if jsonData, err := json.Marshal(i); err != nil {
 		details = details + fmt.Sprintf("json marshal error: %s\n", err)
@@ -29,6 +29,7 @@ func JsonText(i interface{}) string {
 	}
 	return details
 }
+
 // RequestDebug generates a string containing details of a request
 func RequestDebug(r *http.Request) string {
 	debugText := fmt.Sprintf("URL: %+v\n", r.URL)
