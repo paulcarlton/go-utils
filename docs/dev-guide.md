@@ -8,10 +8,10 @@ directory of the repository. This will also install any software you need on you
 
 ## Setup
 
-clone into $GOPATH/src/github.hpe.com/platform-core:
+clone into $GOPATH/src/github.com/paulcarlton/go-utils:
 
-    cd $GOPATH/src/github.hpe.com/platform-core
-    git clone ssh://<gerrit user>@review.zing.hpelabs.net:29418/platform-core/utils
+    cd $GOPATH/src/github.com/paulcarlton/go-utils
+    git clone git@github.com:paulcarlton/go-utils.git
     cd utils
 
 Optionally install required software versions in project's bin directory:
