@@ -33,7 +33,10 @@ func JSONtext(i interface{}) string {
 // RequestDebug generates a string containing details of a request
 func RequestDebug(r *http.Request) string {
 	debugText := fmt.Sprintf("URL: %+v\n", r.URL)
-	buf, _ := ioutil.ReadAll(r.Body)
+	buf, e := ioutil.ReadAll(r.Body)
+	if e != nil {
+		return debugText + fmt.Sprintf("error reading body, %s", e)
+	}
 	rdr1 := ioutil.NopCloser(bytes.NewBuffer(buf))
 	rdr2 := ioutil.NopCloser(bytes.NewBuffer(buf))
 	data, e := ioutil.ReadAll(rdr1)
