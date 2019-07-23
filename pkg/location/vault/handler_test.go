@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.hpe.com/platform-core/utils/pkg/location"
+	"github.com/paulcarlton/go-utils/pkg/location"
 
 	sidelib "github.hpe.com/ncs-security/sec-side-golib"
 )

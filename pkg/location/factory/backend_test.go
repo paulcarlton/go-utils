@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.hpe.com/platform-core/utils/pkg/core"
-	"github.hpe.com/platform-core/utils/pkg/location"
+	"github.com/paulcarlton/go-utils/pkg/core"
+	"github.com/paulcarlton/go-utils/pkg/location"
 )
 
 func TestSelectHandlerErrors(t *testing.T) {

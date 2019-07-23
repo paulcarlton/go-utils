@@ -14,9 +14,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.hpe.com/platform-core/utils/pkg/core"
-	"github.hpe.com/platform-core/utils/pkg/goutils"
-	"github.hpe.com/platform-core/utils/pkg/location"
+	"github.com/paulcarlton/go-utils/pkg/core"
+	"github.com/paulcarlton/go-utils/pkg/goutils"
+	"github.com/paulcarlton/go-utils/pkg/location"
 )
 
 const (

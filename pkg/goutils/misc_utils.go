@@ -3,9 +3,19 @@
 package goutils
 
 import (
-	"github.hpe.com/platform-core/utils/pkg/core"
-	"github.hpe.com/platform-core/utils/pkg/internal/common"
+	"github.com/paulcarlton/go-utils/pkg/core"
+	"github.com/paulcarlton/go-utils/pkg/internal/common"
+	"net/http"
 )
+
+// JsonText generates a string containing a json representation of an interface
+func JsonText(i interface{}) string {
+	return common.JsonText(i)
+}
+// RequestDebug generates a string containing details of a request
+func RequestDebug(r *http.Request) string {
+	return common.RequestDebug(r)
+}
 
 // Callers returns an array of strings containing the function name, source filename and line
 // number for the caller of this function and its caller moving up the stack for as many levels as

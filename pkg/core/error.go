@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.hpe.com/platform-core/utils/pkg/internal/common"
+	"github.com/paulcarlton/go-utils/pkg/internal/common"
 )
 
 type (
